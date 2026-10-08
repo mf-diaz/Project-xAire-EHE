@@ -1,0 +1,4 @@
+#!/bin/sh
+# Blocks commits that would add raw data, caches or notebook outputs. Enable with:
+#   git config core.hooksPath .githooks
+python3 "$(git rev-parse --show-toplevel)/tools/check_repo_clean.py"
