@@ -1,0 +1,7 @@
+# Python 3.11 or newer. Versions the pipeline was tested with are in the comments.
+numpy>=2.4        # tested 2.4.4
+pandas>=3.0       # tested 3.0.2
+scipy>=1.17       # tested 1.17.1
+scikit-learn>=1.8 # tested 1.8.0
+matplotlib>=3.10  # tested 3.10.9
+fastdtw==0.3.4    # if the build fails: SETUPTOOLS_USE_DISTUTILS=stdlib pip install --no-build-isolation fastdtw==0.3.4
