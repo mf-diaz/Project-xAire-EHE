@@ -40,6 +40,13 @@ if not skip_ext:
             bad.append(f"{name} differs from reference")
     print("Extensive-run summaries:", "agree with reference" if len(bad) == n0 else "DIFFER")
 
+FIGS = ["graphical_abstract.pdf", "Fig1_pipeline.pdf", "Fig2_vote_schematic.pdf", "Fig3_conditional_probabilities.pdf",
+        "Fig4_validation.pdf", "Fig5_characterisation.pdf"]
+missing = [f for f in FIGS if not (ROOT / "figures" / f).exists()]
+if missing:
+    bad.append(f"missing in figures/: {missing}")
+print("figures/:", "all six present" if not missing else "INCOMPLETE")
+
 if bad:
     print("\n".join(bad)); sys.exit(1)
 print("REPRODUCTION OK")

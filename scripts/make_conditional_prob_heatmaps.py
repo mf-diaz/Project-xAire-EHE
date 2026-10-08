@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import _style
-from xaire_paths import WORK, RESULTS
+from xaire_paths import WORK, FIGURES
 _style.apply()
 
 ENDOWMENT = 60
@@ -37,5 +37,5 @@ for ax, (letter, title, fname, xlabel) in zip(axes.ravel(), PANELS):
             ax.text(j, i, f"{probs[i, j]:.2f}", ha="center", va="center", fontsize=11)
     fig.colorbar(im, ax=ax, fraction=0.046, pad=0.03)
 plt.tight_layout()
-plt.savefig(RESULTS / "conditional_prob_heatmaps.pdf", bbox_inches="tight")
-print("wrote", RESULTS / "conditional_prob_heatmaps.pdf")
+plt.savefig(FIGURES / "Fig3_conditional_probabilities.pdf", bbox_inches="tight", metadata={"CreationDate": None})
+print("wrote", FIGURES / "Fig3_conditional_probabilities.pdf")

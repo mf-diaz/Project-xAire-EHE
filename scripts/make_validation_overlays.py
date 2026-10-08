@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import _style
-from xaire_paths import WORK, RESULTS, ROUND_COLS, load_participants
+from xaire_paths import WORK, FIGURES, ROUND_COLS, load_participants
 _style.apply()
 plt.rcParams.update({"font.size": 14, "axes.labelsize": 16, "xtick.labelsize": 14, "ytick.labelsize": 14})   # larger fonts for this figure only
 
@@ -50,8 +50,8 @@ def main():
     axes[0].axhline(120, color="grey", ls=":", lw=1)
     axes[0].legend(loc="lower right", frameon=True, fontsize=11.5)
     plt.tight_layout()
-    plt.savefig(RESULTS / "validation_overlays.pdf", bbox_inches="tight")
-    print("wrote", RESULTS / "validation_overlays.pdf")
+    plt.savefig(FIGURES / "Fig4_validation.pdf", bbox_inches="tight", metadata={"CreationDate": None})
+    print("wrote", FIGURES / "Fig4_validation.pdf")
 
 
 if __name__ == "__main__":

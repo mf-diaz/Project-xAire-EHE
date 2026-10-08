@@ -15,7 +15,7 @@ import json
 import pandas as pd
 import matplotlib.pyplot as plt
 import _style
-from xaire_paths import WORK, RESULTS
+from xaire_paths import WORK, FIGURES
 _style.apply()
 
 ORDER = [("4", "Unanimous\n(4-0)", "tab:green"), ("3-1", "Majority\n(3-1)", "tab:blue"),
@@ -47,8 +47,8 @@ def main():
     ax2.legend(handles=[l1, l2], loc="upper right")
     ax2.text(0.03, 0.95, "(b)", transform=ax2.transAxes, fontsize=12, fontweight="bold", va="top")
     plt.tight_layout()
-    plt.savefig(RESULTS / "EHE_characterisation.pdf", bbox_inches="tight")
-    print("wrote", RESULTS / "EHE_characterisation.pdf")
+    plt.savefig(FIGURES / "Fig5_characterisation.pdf", bbox_inches="tight", metadata={"CreationDate": None})
+    print("wrote", FIGURES / "Fig5_characterisation.pdf")
 
 
 if __name__ == "__main__":
