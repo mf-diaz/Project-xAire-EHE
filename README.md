@@ -8,7 +8,7 @@ Data in Brief deposit. No empirical data are stored in this repository.
 
 Download the deposit from CORA.RDR, DOI [10.34810/DATA3672](https://doi.org/10.34810/DATA3672), and unzip
 it inside `data/`. The downloaded zip unpacks to `Readme.md` and a folder `xAire_CRD_dataset/`, so that
-`data/xAire_CRD_dataset/processed/participants.csv` exists (see `data/README.md`). Only
+`data/xAire_CRD_dataset/processed/participants.csv` exists (see `data/WHERE_TO_PUT_THE_DEPOSIT.md`). Only
 `processed/participants.csv` and `processed/games.csv` are read. In the deposit the wealth treatment
 (`control_wealth`) is stored per game, so the scripts join it onto the participants through `partida_id`;
 they stop with a message if the deposit does not contain the 462 participants, 77 games (6 Equal, 27

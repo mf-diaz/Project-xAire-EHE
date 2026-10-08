@@ -13,3 +13,6 @@ The contents of `xAire_CRD_dataset/` placed directly in `data/` (without the fol
 from the deposit is read. Everything in this folder except this file is ignored by git; the data must stay in
 the deposit and must not be copied into the repository. To keep the deposit elsewhere, set the `XAIRE_DATA`
 environment variable to its root folder.
+
+This file is not called README.md on purpose: the deposit contains its own `Readme.md`, and on systems that
+ignore letter case (macOS, Windows) unzipping it here would overwrite a file of that name.

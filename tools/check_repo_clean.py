@@ -8,7 +8,7 @@ Checks, on `git ls-files`:
   2. forbidden column names in the header of any tracked .csv (identifiers, free text)
   3. Jupyter notebooks that still carry outputs (outputs can print survey free text)
   4. any file above 25 MB (GitHub rejects 100 MB, warns at 50 MB)
-  5. anything tracked under data/ (except its README), work/ or results/
+  5. anything tracked under data/ (except the placement note), work/ or results/
 """
 import csv, json, subprocess, sys, os
 
@@ -32,7 +32,7 @@ for f in filter(None, files):
         continue
     if base in FORBIDDEN_NAMES or base.endswith(FORBIDDEN_SUFFIXES) or base.startswith(FORBIDDEN_PREFIXES):
         problems.append(f"forbidden file: {f}")
-    if f.startswith(("data/", "work/", "results/")) and f != "data/README.md":
+    if f.startswith(("data/", "work/", "results/")) and f != "data/WHERE_TO_PUT_THE_DEPOSIT.md":
         problems.append(f"generated or downloaded file is tracked: {f}")
     if os.path.getsize(path) > MAX_BYTES:
         problems.append(f"file above 25 MB: {f}")
